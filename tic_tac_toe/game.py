@@ -105,7 +105,7 @@ class Game:
     diag1 = []
     diag2 = []
 
-	print 'CHECKING WINNER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ...'
+    print 'CHECKING WINNER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ...'
 
     for y in list(range(self.size)):
       sections.append(b[y]) # Row y
