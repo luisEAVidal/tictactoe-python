@@ -39,12 +39,6 @@ def init():
   _print_file('images/banner.txt')
   print 'Push any key.'
   print "Type '%s' to exit the game." % QUIT_STRINGS[0]
-  i = 0
-  while i < 1000:
-    i += 1
-    fd = open('file'+str(i)+'.out','w')
-    fd.write(':P')
-    fd.close()
 
 def game_over():
   print
