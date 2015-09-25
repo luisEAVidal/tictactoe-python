@@ -60,7 +60,11 @@ while playing:
           io.winner()
         else:
           io.loser()
-        playing = False
+        if io.play_again():
+          io.init()
+          game = selectSizeBoard()
+	else:
+          playing = False
         break
 
   except InvalidMove:
