@@ -27,14 +27,24 @@ from tic_tac_toe import io
 import sys
 
 # Initialize objects
-# Enable board and game to play 4x4 
-game = Game(4)
+selectBoard= 1 
+game = Game(5)
 players = [Player('X'), AIPlayer('O')]
 playing = True # Main loop control needed to break out of multiple levels
 io.init()
 
 # Main game loop
+# Enable select size board to play 
+# Valid values 3 to 5   
 while playing:
+  while selectBoard:
+    sizeBoard=int(raw_input('Enter size of board 3 to 5:'))
+    if sizeBoard < 6 and sizeBoard > 2:
+      game.size=sizeBoard
+      selectBoard=0
+    else:
+      print '\nInvalid  value\n'
+   
   io.print_board(game)
   try:
     for player in players:
