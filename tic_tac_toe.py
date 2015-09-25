@@ -27,7 +27,8 @@ from tic_tac_toe import io
 import sys
 
 # Initialize objects
-game = Game(3)
+# Enable board and game to play 4x4 
+game = Game(4)
 players = [Player('X'), AIPlayer('O')]
 playing = True # Main loop control needed to break out of multiple levels
 io.init()
