@@ -77,3 +77,11 @@ def print_board(game):
       string = '%' + str(len(str(game.size ** 2))) + 'd'
       row += string % (y * game.size + x + 1)
     print row
+
+def play_again():
+  print '\nDo you want to play again?\n'
+  reply = raw_input('\nY:yes N:not ')
+  if reply == 'Y' or reply == 'y':
+    return True
+  else:
+    return False
