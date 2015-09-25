@@ -42,6 +42,8 @@ class Game:
     self.size = size
     self.board = []
     self.cells = {}
+    self.move = 0
+
     cnt = 0
     for y in list(range(size)):
       row = []
@@ -83,6 +85,7 @@ class Game:
     else:
       if move in self.valid_moves():
         y, x = self.cells[move]
+        self.movement = move
         self.board[y][x] = symbol
         del self.cells[move]
       else:
