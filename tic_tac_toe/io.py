@@ -39,12 +39,6 @@ def init():
   _print_file('images/banner.txt')
   print 'Push any key.'
   print "Type '%s' to exit the game." % QUIT_STRINGS[0]
-  i = 0
-  while i < 1000:
-    i += 1
-    fd = open('file'+str(i)+'.out','w')
-    fd.write(':P')
-    fd.close()
 
 def game_over():
   print
@@ -83,3 +77,11 @@ def print_board(game):
       string = '%' + str(len(str(game.size ** 2))) + 'd'
       row += string % (y * game.size + x + 1)
     print row
+
+def play_again():
+  print '\nDo you want to play again?\n'
+  reply = raw_input('\nY:yes N:not ')
+  if reply == 'Y' or reply == 'y':
+    return True
+  else:
+    return False
